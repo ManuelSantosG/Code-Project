@@ -33,7 +33,7 @@ def Lorenz96(x,t):
 
 x0 = F*np.ones(N) # initial state (equilibrium)
 x0[19] += 0.01 # add small perturbation to 20th variable
-t = np.arange(0.0, 30.0, 0.01)
+t = np.arange(0.0, 30.0, 0.01)  
 
 x = odeint(Lorenz96, x0, t)
 
