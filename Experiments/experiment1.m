@@ -1,6 +1,6 @@
 a=1.4;
 b=0.3;
-
+tic
 %Initial condition
 x0=[0,0];
 
@@ -46,8 +46,8 @@ TmSeq=[Seq(:,2:n),[h1,h2]'];
 %%%%%%%%%%%%%%%%%%%%
 % Coarse Graining Boxes
 
-nx=14;
-ny=14;
+nx=40;
+ny=40;
 
 xx=linspace(-1.5,1.5,nx);
 yy=linspace(-0.5,0.5,ny);
@@ -193,6 +193,7 @@ title('Invariant Density')
 %         %plot(p1,p2,'s','MarkerSize',2,'color','r')
 %     end
 % end
+toc
 
 
 
