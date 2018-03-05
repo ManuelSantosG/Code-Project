@@ -46,8 +46,8 @@ TmSeq=[Seq(:,2:n),[h1,h2]'];
 %%%%%%%%%%%%%%%%%%%%
 % Coarse Graining Boxes
 
-nx=40;
-ny=40;
+nx=10;
+ny=10;
 
 xx=linspace(-1.5,1.5,nx);
 yy=linspace(-0.5,0.5,ny);
