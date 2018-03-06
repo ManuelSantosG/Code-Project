@@ -26,6 +26,7 @@ n1 = 80;
 
 
 gauss = @(q,a,c)a*randn(2,q)+repmat(c(:), [1 q]);
+%The sample points are a 2xn_i matrix
 X0 = randn(2,n0)*.3;
 X1 = [gauss(n1/2,.5, [0 1.6]) gauss(n1/4,.3, [-1 -1]) gauss(n1/4,.3, [1 -1])];    
     
