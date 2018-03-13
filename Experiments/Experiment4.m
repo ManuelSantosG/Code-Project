@@ -5,7 +5,7 @@ v = @(x) [-x(:,2).^2 - x(:,3).^2 - s*x(:,1) + s*F  ...
 h = 0.01; n = 10; f = @(x) rk4(v,x,h,n); % f is the flow
 
 
-n = 3; x = linspace(-1,1,n)'; [XX,YY,ZZ] = meshgrid(x,x,x);
+n = 7; x = linspace(-1,1,n)'; [XX,YY,ZZ] = meshgrid(x,x,x);
 X = [ XX(:) YY(:) ZZ(:) ];               % $7^3$ sample points
 c = [0.1 0.1 27]; r = [30 30 40];
 t = Tree(c,r);                           % the box collection
@@ -17,7 +17,7 @@ gum(t, f, X, depth);                     % compute global unstable manifold
 
 X = 2*rand(100,3)-1;                     % points for Monte Carlo quadrature
 P = tpmatrix(t, f, X, depth,1);          % transition matrix
-[w,lambda] = eigs(P,1,'lm');             % compute eigenvector at eigenvalue 1
+[w,lambda] = eigs(P,2,'lm');             % compute eigenvector at eigenvalue 1
 wp = log10(max(abs(w(:,1)),1e-16));      % plot measure logarithmically
 
 
@@ -26,5 +26,5 @@ load lorenz_cmap; colormap(cmap);        % special colormap
 view(20,30); axis square; axis tight;
 xlabel('x'); ylabel('y'); zlabel('z');
 
-
+1-abs(lambda(2,2))
 

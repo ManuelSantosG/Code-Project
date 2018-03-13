@@ -48,8 +48,8 @@ n=649;
 %%%%%%%%%%%%%%%%%%%%
 % Coarse Graining Boxes
 
-nx=10;
-ny=10;
+nx=20;
+ny=20;
 
 xx=linspace(0,3,nx);
 yy=linspace(0,2.5,ny);
