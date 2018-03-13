@@ -39,7 +39,7 @@ TmSeq(1,:)=XE([2:650],1);
 TmSeq(2,:)=XE([2:650],2);
 
 plot(Seq(1,:),Seq(2,:),'.','MarkerSize',4)
-title('Poincaré Section L-84')
+%title('Poincaré Section L-84')
 hold on
 
 n=649;
@@ -183,7 +183,7 @@ Dv=(1/sum(Dv))*Dv;
 
 figure(2)
 plot(Dv)
-title('Invariant Density')
+%title('Invariant Density')
 % for i=1:com_n
 %     if abs(Dv(i))>0
 %         p1=0.5*(Bn(i,1)+Bn(i,3));

@@ -15,7 +15,8 @@ function T = tpmatrix(tree, f, X, depth, verbose)
 
 d = tree.dim;
 b = tree.boxes(depth);                       % get the geometry of the boxes
-N = size(b,2); S = whos('X'); l = floor(5e7/S.bytes);
+N = size(b,2)
+S = whos('X'); l = floor(5e7/S.bytes);
 I = []; IJS = []; tic;
 for k = 0:floor(N/l),                     % split in chunks of size l
     K = k*l+1:min((k+1)*l,N);
