@@ -6,4 +6,4 @@ for i=5:21;
     resolution=[resolution, res];
     spectralgap=[spectralgap, spg];
 end
-plot(resolution,spectralgap)
+plot(resolution,spectralgap,)

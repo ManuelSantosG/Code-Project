@@ -1,3 +1,4 @@
+
 s = 10; rh = 28; b = 0.4;                % the Lorenz system
 v = @(x) [s*(x(:,2)-x(:,1)) ...
           rh*x(:,1)-x(:,2)-x(:,1).*x(:,3) ...
@@ -12,7 +13,7 @@ t = Tree(c,r);                           % the box collection
 
 
 a = sqrt(b*(rh-1)); x0 = [a a rh-1;-a -a rh-1]; % equilibria
-depth = 15; 
+depth = 21; 
 t.insert(x0', depth);         % construct [x0]
 gum(t, f, X, depth);                     % compute global unstable manifold
 
