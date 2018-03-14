@@ -12,7 +12,8 @@ t = Tree(c,r);                           % the box collection
 
 
 a = sqrt(b*(rh-1)); x0 = [7.996268 -0.0065 0.00298]; % equilibria
-depth = 15; t.insert(x0', depth);% construct [x0]
+%depth = 15; 
+t.insert(x0', depth);% construct [x0]
 gum(t, f, X, depth);                     % compute global unstable manifold
 
 X = 2*rand(100,3)-1;                     % points for Monte Carlo quadrature

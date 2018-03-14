@@ -32,7 +32,7 @@ end
 
 % Simulation of many short trajectories; ICs are chosen randomly from the
 % long trajectory
-nic = 50; % number of initial conditions
+nic = 100; % number of initial conditions
 x0 = X(randsample(n,nic),:)'; % mind the transposition
 x0 = x0(:);
 n = 2e4; % number of time steps for output
