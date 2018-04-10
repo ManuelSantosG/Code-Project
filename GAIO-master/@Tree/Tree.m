@@ -12,7 +12,7 @@ function t = Tree(arg0, arg1, arg2)
 %    t.depth             - current depth
 %    t.center            - center of the outer box Q
 %    t.center = c        - sets center of outer box Q to c
-%    t.radius            - radius of the outer box Q
+%    t.radius            - radius of the outer box Qt.radius
 %    t.radius = r        - sets the radius of outer box Q to r
 %    t.sd                - vector which defines in which coordinate direction 
 %                          boxes on a certain depth will be subdivided (i.e.

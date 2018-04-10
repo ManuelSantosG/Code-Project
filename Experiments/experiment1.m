@@ -19,7 +19,6 @@ end
 
 
 plot(Seq(1,:),Seq(2,:),'.','MarkerSize',4)
-title('Hénon Map')
 hold on
 
 
@@ -46,8 +45,8 @@ TmSeq=[Seq(:,2:n),[h1,h2]'];
 %%%%%%%%%%%%%%%%%%%%
 % Coarse Graining Boxes
 
-nx=60;
-ny=60;
+nx=10;
+ny=10;
 
 xx=linspace(-1.5,1.5,nx);
 yy=linspace(-0.5,0.5,ny);
