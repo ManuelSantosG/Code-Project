@@ -1,5 +1,5 @@
 
-s = 10; rh = 28; b = 0.4;                % the Lorenz system
+s = 10; rh = 28; b = 8/3;                % the Lorenz system
 v = @(x) [s*(x(:,2)-x(:,1)) ...
           rh*x(:,1)-x(:,2)-x(:,1).*x(:,3) ...
           x(:,1).*x(:,2)-b*x(:,3)];
@@ -13,14 +13,16 @@ t = Tree(c,r);                           % the box collection
 
 
 a = sqrt(b*(rh-1)); x0 = [a a rh-1;-a -a rh-1]; % equilibria
-depth = 10; 
+depth = 15; 
 t.insert(x0', depth);         % construct [x0]
 gum(t, f, X, depth);                     % compute global unstable manifold
+
+boxplot3(t); view(20,30); axis tight; axis square;
+xlabel('x'); ylabel('y'); zlabel('z');
 
 X = 2*rand(100,3)-1;                     % points for Monte Carlo quadrature
 P = tpmatrix(t, f, X, depth,1);% transition matrix
 [w,lambda] = eigs(P,1,'lm');             % compute eigenvector at eigenvalue 1
-size(w)
 wp = log10(max(abs(w(:,1)),1e-16)) ;     % plot measure logarithmically
 
 %spectra_gap=1-abs(lambda(2,2));

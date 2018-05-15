@@ -47,10 +47,11 @@ edgecolor = p.Results.edgecolor;
 if alpha < 1,
     alpha_edge = 0;
 end
-if isempty(p.Results.density)
+if isempty(p.Results.density);
     col = p.Results.color;
 else
     col = p.Results.density(:);
+%     plot(col)
 end
 
 if isa(B,'Tree')
